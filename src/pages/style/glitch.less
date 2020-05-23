@@ -1,0 +1,76 @@
+.glitch-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  display: none;
+
+  &_active {
+    display: block;
+  }
+
+  &__item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    &:nth-of-type(1) {
+      background: black;
+    }
+
+    &:nth-of-type(2) {
+      background-image: url("/images/original.png");
+      .glitch(second, 20)
+    }
+
+    &:nth-of-type(3) {
+      background-image: url("/images/blured.png");
+      .glitch(third, 40)
+    }
+
+    &:nth-of-type(4) {
+      background: black;
+      .glitch(fourth, 40, true)
+    }
+
+    &:nth-of-type(5) {
+      background-image: url("/images/glass.png");
+      .glitch(fifth, 5)
+    }
+  }
+}
+
+.glitch(@id, @count: 20, @height: false) {
+  animation: @animationName 2s infinite linear alternate-reverse;
+
+  @keyframes @animationName {
+    .glitch-loop(@count, @height);
+  }
+  @animationName: ~"@{id}-glitch";
+
+}
+
+.get-clip(@height) {
+  clip: if (@height),
+    rect(unit(@random - @smallHeight, px), 9999px, unit(@random, px), 0),
+    rect(unit(@random - @bigHeight, px), 9999px, unit(@random, px), unit(`Math.random() * 400`, px));
+  @random: `Math.random() * 1000`;
+  @smallHeight: `Math.random() * 20`;
+  @bigHeight: `Math.random() * 100`;
+}
+
+.glitch-loop(@steps, @height: 600, @index: 0) when (@index <=@steps) {
+
+  @{percent} {
+    clip: rect(unit(`Math.random() * 400`, px), 9999px, unit(`Math.random() * 1000`, px), 0);
+  }
+
+  .glitch-loop(@steps, @height, @index + 1);
+  @percent: percentage(@index * (1/@steps));
+}

@@ -1,0 +1,44 @@
+@import (reference) 'font-face';
+
+@root-font-path: "/fonts/";
+@font-name: "Montserrat";
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Montserrat-Regular.woff2");
+}
+
+.font-face(@font-name, 'Thin', @root-font-path, 100, normal);
+.font-face(@font-name, 'ThinItalic', @root-font-path, 100, italic);
+
+.font-face(@font-name, 'ExtraLight', @root-font-path, 200, normal);
+.font-face(@font-name, 'ExtraLightItalic', @root-font-path, 200, italic);
+
+.font-face(@font-name, 'Light', @root-font-path, 300, normal);
+.font-face(@font-name, 'LightItalic', @root-font-path, 300, italic);
+
+.font-face(@font-name, 'Regular', @root-font-path, 400, normal);
+
+.font-face(@font-name, 'Medium', @root-font-path, 500, normal);
+.font-face(@font-name, 'MediumItalic', @root-font-path, 500, italic);
+
+.font-face(@font-name, 'SemiBold', @root-font-path, 600, normal);
+.font-face(@font-name, 'SemiBoldItalic', @root-font-path, 600, italic);
+
+.font-face(@font-name, 'Bold', @root-font-path, 700, normal);
+.font-face(@font-name, 'BoldItalic', @root-font-path, 700, italic);
+
+.font-face(@font-name, 'ExtraBold', @root-font-path, 800, normal);
+.font-face(@font-name, 'ExtraBoldItalic', @root-font-path, 800, italic);
+
+.font-face(@font-name, 'Black', @root-font-path, 900, normal);
+.font-face(@font-name, 'BlackItalic', @root-font-path, 900, italic);
+
+
+.font-face("Lora", 'Regular', @root-font-path, 400, normal);
+.font-face("Lora", 'Italic', @root-font-path, 400, italic);
+.font-face("Lora", 'Bold', @root-font-path, 700, normal);
+.font-face("Lora", 'BoldItalic', @root-font-path, 700, italic);

@@ -1,0 +1,117 @@
+@import (reference) "./common";
+
+.first-block {
+  height: 100vh;
+  background-image: url("/images/glass.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: background-color 400ms;
+
+  &__description {
+    position: relative;
+    z-index: 50;
+    padding: 0 @layout-h-padding;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 88px;
+    transition: color 400ms;
+  }
+
+  &__code {
+    color: #0d02ff;
+    z-index: 20;
+  }
+
+  &__something {
+    color: #ff0101;
+    z-index: 50;
+    position: relative;
+    text-decoration: underline;
+  }
+
+  &__name {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: "";
+      height: @block-height;
+      position: absolute;
+      left: -@first-h-padding;
+      right: -@second-h-padding;
+      top: -@v-padding;
+      background-color: #F760FF;
+      z-index: -1;
+      transition: opacity 400ms;
+    }
+
+    &::after {
+      content: "";
+      height: @block-height;
+      bottom: -@v-padding;
+      position: absolute;
+      left: -@second-h-padding;
+      right: -@first-h-padding;
+      background-color: #69FFED;
+      z-index: -1;
+      transition: opacity 400ms;
+    }
+    @first-h-padding: 9px;
+    @second-h-padding: 20px;
+    @v-padding: 7px;
+    @block-height: calc(50% + @v-padding);
+  }
+}
+
+.glitch-effect {
+
+  .first-block {
+
+    &__description {
+      color: #ffffff;
+    }
+  }
+}
+
+.something-else-effect {
+
+  .first-block {
+    background-color: black;
+
+    &__description {
+      color: #A5A5A5;
+    }
+
+    &__name {
+
+      &::before,
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.code-effect {
+
+  .first-block {
+
+    background-color: #292929;
+
+    &__description {
+      color: #A5A5A5;
+    }
+
+    &__name {
+
+      &::before,
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+}

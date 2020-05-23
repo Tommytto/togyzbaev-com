@@ -1,0 +1,17 @@
+.something-else {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 300ms;
+  background: radial-gradient(#292929 25%, #303030 25%), #292929;
+  background-size: 20px 20px;
+  opacity: 0;
+  font-size: calc(12px + 8*(100vw - 375px)/1545);
+
+  &_active {
+    opacity: 1;
+  }
+}
