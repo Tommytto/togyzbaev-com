@@ -3,7 +3,7 @@ import {graphql, Link} from 'gatsby'
 import get from 'lodash/get'
 import '../style/index.less';
 import './style/style.less';
-import {startAnimation} from "./test";
+import {startAnimation} from "../test";
 import {Helmet} from "react-helmet";
 
 const effects = {
@@ -17,7 +17,15 @@ class IndexPage extends React.Component {
         activeGlitch: false,
         activeCode: false,
         activeSomethingElse: false,
+        windowWidth: 1,
     };
+
+    componentDidMount() {
+        this.setState({
+            windowWidth: window.innerWidth
+        })
+    }
+
 
     animationLength = 2500;
     runInterval = 300;
@@ -41,7 +49,7 @@ class IndexPage extends React.Component {
     renderRandomNumber(index) {
         const number = (Math.random() > 0.5) ? 1 : 0;
         const color = (Math.random() > 0.5) ? '#ffffff' : '#14FF00';
-        const left = Math.floor(Math.random() * window.innerWidth);
+        const left = Math.floor(Math.random() * this.state.windowWidth);
         const delay = Math.random();
         return <div key={index} style={{animationDelay: `${delay}s`, color, left}}
                     className="code-animation-container__number">{number}</div>;
