@@ -19,7 +19,6 @@ class IndexPage extends React.Component {
         activeSomethingElse: false,
     };
 
-    treeRef = React.createRef();
     animationLength = 2500;
     runInterval = 300;
     circleCount = Math.floor(this.animationLength / this.runInterval);
@@ -34,7 +33,7 @@ class IndexPage extends React.Component {
                     }, {once: true})
                 })
             });
-            await Promise.all(promiseList)
+            await Promise.all(promiseList);
             startAnimation()
         }
     }
@@ -118,8 +117,7 @@ class IndexPage extends React.Component {
                         </svg>
                     </div>
                     <div className="header__info">
-                        <span>RUS</span>
-                        <span className="header__email">tim.togyzbaev@gmail.com</span>
+                        <span className="header__channel header__link">МОЙ КАНАЛ</span>
                     </div>
                 </header>
                 <main>
@@ -132,7 +130,7 @@ class IndexPage extends React.Component {
                                   className="first-block__code">Кодю</span> сайты, приложения и&nbsp;
                             <span onMouseEnter={this.handleSomethingElseStart}
                                   onMouseLeave={this.handleSomethingElseStop}
-                                  className="first-block__something j-something-else-text">что-то еще</span>.
+                                  className="first-block__something">что-то еще</span>.
                         </h1>
                         <div className={`glitch-container ${this.state.activeGlitch ? 'glitch-container_active' : ''}`}>
                             <div className="glitch-container__item"></div>
