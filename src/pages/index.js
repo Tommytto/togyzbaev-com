@@ -139,12 +139,12 @@ class IndexPage extends React.Component {
                         <h1 className="first-block__description">
                             <span onMouseEnter={this.handleNameStart} onMouseLeave={this.handleNameStop}
                                   className="first-block__name">Тимур Тогызбаев</span>
-                            <span> фронтенд разработчик.</span>&nbsp;
+                            <span> фронтенд разработчик.</span>
                             {/*br показываются только на мобиле*/}
                             <br/>
                             <br/>
                             <span onMouseEnter={this.handleCodeStart} onMouseLeave={this.handleCodeStop}
-                                  className="first-block__code">Кодю</span> сайты, приложения и&nbsp;
+                                  className="first-block__code"> Кодю</span> сайты, приложения и&nbsp;
                             <span onMouseEnter={this.handleSomethingElseStart}
                                   onMouseLeave={this.handleSomethingElseStop}
                                   className="first-block__something">что-то еще</span>.
