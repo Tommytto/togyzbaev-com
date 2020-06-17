@@ -5,9 +5,8 @@
     font-style: @style;
     font-weight: @weight;
     src: url("@{path}@{title}-@{name}.woff2");
-    src: @woff2, @woff, @ttf;
+    src: @woff2, @woff;
   }
-  @ttf: url("@{path}@{title}-@{name}.ttf") format("truetype");
   @woff: url("@{path}@{title}-@{name}.woff") format("woff");
   @woff2: url("@{path}@{title}-@{name}.woff2") format("woff2");
 }

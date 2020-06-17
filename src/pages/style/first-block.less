@@ -1,4 +1,5 @@
 @import (reference) "./common";
+@import (reference) "../../style/adaptive";
 
 .first-block {
   height: 100vh;
@@ -11,6 +12,11 @@
   overflow: hidden;
   transition: background-color 400ms;
 
+  @media @sm-max {
+    align-items: flex-start;
+    padding-top: 138px;
+  }
+
   &__description {
     position: relative;
     z-index: 50;
@@ -19,7 +25,26 @@
     font-size: 72px;
     line-height: 88px;
     transition: color 400ms;
-    font-family: Montserrat;
+    font-family: "GoshaSans", Helvetica, sans-serif;
+
+    br {
+      display: none;
+    }
+
+    @media @sm-max {
+      font-size: 64px;
+      line-height: 56px;
+
+      br {
+        display: initial;
+      }
+    }
+
+    @media @xs-max {
+      font-size: 36px;
+      line-height: 44px;
+      padding: 0 @layout-h-padding-mobile;
+    }
   }
 
   &__code {

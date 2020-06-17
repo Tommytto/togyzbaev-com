@@ -1,15 +1,7 @@
 @import (reference) 'font-face';
 
 @root-font-path: "./../../static/fonts/";
-@font-name: Montserrat;
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style: normal;
-  src: url("/fonts/Montserrat-Bold.woff2") format("woff2");
-  font-display: swap;
-}
+@font-name: "Montserrat";
 
 .font-face(@font-name, 'Thin', @root-font-path, 100, normal);
 .font-face(@font-name, 'ThinItalic', @root-font-path, 100, italic);
@@ -39,6 +31,7 @@
 
 
 .font-face("Lora", 'Regular', @root-font-path, 400, normal);
-.font-face("Lora", 'Italic', @root-font-path, 400, italic);
 .font-face("Lora", 'Bold', @root-font-path, 700, normal);
-.font-face("Lora", 'BoldItalic', @root-font-path, 700, italic);
+
+.font-face("GoshaSans", 'Regular', @root-font-path, 400, normal);
+.font-face("GoshaSans", 'Bold', @root-font-path, 700, normal);
