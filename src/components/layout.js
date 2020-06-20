@@ -1,6 +1,6 @@
 import React from 'react'
 import './layout.less'
-import BlogHeader from "./blog-header";
+import Header from "./header";
 
 class Template extends React.Component {
   render() {
@@ -8,7 +8,7 @@ class Template extends React.Component {
 
     return (
         <div>
-        <BlogHeader />
+        <Header />
         <main className="default-layout">
           {children}
         </main>
