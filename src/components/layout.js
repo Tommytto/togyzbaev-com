@@ -1,16 +1,18 @@
 import React from 'react'
-import Container from './container'
-import Navigation from './navigation'
+import './layout.less'
+import BlogHeader from "./blog-header";
 
 class Template extends React.Component {
   render() {
     const { children } = this.props
 
     return (
-      <Container>
-        <Navigation />
-        {children}
-      </Container>
+        <div>
+        <BlogHeader />
+        <main className="default-layout">
+          {children}
+        </main>
+        </div>
     )
   }
 }

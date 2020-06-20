@@ -1,0 +1,37 @@
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.post-list-item {
+  display: flex;
+
+  &__bullet {
+    width: 8px;
+    background-image: url('/icons/bullet.svg');
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    background-position: 0 10px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+  }
+
+  &__preview-text {
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 8px;
+  }
+
+  &__footer-item {
+    font-size: 18px;
+    color: black;
+    opacity: 0.5;
+    display: inline-block;
+    margin-right: 24px;
+  }
+}
