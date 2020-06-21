@@ -3,7 +3,6 @@ import './post-list-item.less'
 import {Link} from 'gatsby'
 
 const PostListItem = ({post}) => {
-    console.log(post);
     return (
         <Link to={"/blog/" + post.slug} className="link">
             <article className="post-list-item">
