@@ -2,7 +2,7 @@ import React from 'react'
 import './layout.less'
 import Header from "./header";
 
-const Layout = () => {
+const Layout = ({children}) => {
     return (
         <div>
             <Header />
