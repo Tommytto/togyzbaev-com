@@ -41,8 +41,14 @@ class IndexPage extends React.Component {
                     }, {once: true})
                 })
             });
-            await Promise.all(promiseList);
-            startAnimation()
+            try {
+                const result = await Promise.all(promiseList);
+                console.log(result);
+                startAnimation()
+            } catch (e) {
+                console.log(e);
+            }
+
         }
     }
 
