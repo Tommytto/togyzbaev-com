@@ -1,20 +1,25 @@
 @import (reference) "./index/style/common";
 @import (reference) "./../style/adaptive";
 
+@header-h: 134px;
+@header-h-mobile: 64px;
+
+
 .header {
   left: 0;
   right: 0;
   z-index: 10;
-  position: absolute;
   padding: 0 @layout-h-padding;
   align-items: center;
   display: flex;
   justify-content: space-between;
   color: #000000;
   height: 134px;
+  position: relative;
 
   @media @xs-max {
     padding: 0 @layout-h-padding-mobile;
+    height: 64px;
   }
 
   &__link {
@@ -27,6 +32,17 @@
 
     &:hover {
       color: black;
+    }
+
+    @media @xs-max {
+      font-size: 20px;
+    }
+  }
+
+  &__logo-icon {
+    @media @xs-max {
+      width: 48px;
+      height: 48px;
     }
   }
 

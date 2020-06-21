@@ -10,14 +10,8 @@ const Post = ({data}) => {
     return (
         <Layout>
             <Breadcrumbs links={[
-                {
-                    to: '/',
-                    title: 'Главная'
-                },
-                {
-                    to: '/blog',
-                    title: 'Блог'
-                }
+                Breadcrumbs.INDEX,
+                Breadcrumbs.BLOG
             ]}/>
             <div className="article-page">
                 <div className="article-page__start">

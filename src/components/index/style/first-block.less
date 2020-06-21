@@ -1,5 +1,6 @@
 @import (reference) "./common";
 @import (reference) "../../../style/adaptive";
+@import (reference) "../../../components/header";
 
 .first-block {
   height: 100vh;
@@ -11,10 +12,12 @@
   align-items: center;
   overflow: hidden;
   transition: background-color 400ms;
+  margin-top: -@header-h;
 
   @media @sm-max {
     align-items: flex-start;
-    padding-top: 138px;
+    margin-top: -@header-h-mobile;
+    padding-top: @header-h-mobile + 30px;
   }
 
   &__description {

@@ -1,3 +1,5 @@
+@import (reference) "../style/adaptive";
+
 .link {
   text-decoration: none;
   color: black;
@@ -7,7 +9,7 @@
   display: flex;
 
   &__bullet {
-    width: 8px;
+    min-width: 8px;
     background-image: url('/icons/bullet.svg');
     background-repeat: no-repeat;
     margin-right: 8px;
@@ -19,6 +21,12 @@
     line-height: 29px;
     font-weight: bold;
     margin: 0 0 8px 0;
+    font-family: GoshaSans, Montserrat, sans-serif;
+
+    @media @xs-max {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__preview-text {

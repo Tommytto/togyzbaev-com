@@ -1,7 +1,15 @@
+@import (reference) "../../style/adaptive";
+
 .blog-page {
   &__title {
     font-size: 56px;
     line-height: 68px;
+    font-family: GoshaSans, Montserrat, sans-serif;
+
+    @media @xs-max {
+      font-size: 36px;
+      line-height: 44px;
+    }
   }
 
   &__post-list-item {

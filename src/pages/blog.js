@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import '../components/blog/index.less';
 import PostListItem from "../components/post-list-item";
 import Layout from "../components/layout";
+import Breadcrumbs from "../components/breadcrumbs";
 
 class BlogIndex extends React.Component {
     render() {
@@ -11,6 +12,9 @@ class BlogIndex extends React.Component {
 
         return (
             <Layout>
+                <Breadcrumbs links={[
+                    Breadcrumbs.INDEX,
+                ]}/>
                 <div className="blog-page">
                     <h1 className="blog-page__title">Все статьи</h1>
                     <div className="blog-page__container">
@@ -33,7 +37,7 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
+          publishDate(formatString: "DD.MM.YY")
           tags
           heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {

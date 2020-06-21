@@ -1,5 +1,8 @@
+@import (reference) "../style/adaptive";
+
 .article-content {
   @main-space: 24px;
+
   * {
     margin: 0;
   }
@@ -13,6 +16,10 @@
     font-family: GoshaSans, Montserrat, sans-serif;
     margin-top: 40px;
     margin-bottom: 0;
+
+    @media @xs-max {
+      margin-top: 24px;
+    }
   }
 
   h2 {
@@ -20,18 +27,34 @@
     line-height: 68px;
     font-weight: bold;
     color: black;
+
+    @media @xs-max {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   h3 {
     font-size: @main-space;
     line-height: 29px;
     font-weight: bold;
+
+    @media @xs-max {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   p {
     font-size: 18px;
     line-height: @main-space;
     margin-top: 16px;
+
+    @media @xs-max {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 8px;
+    }
   }
 
   img {

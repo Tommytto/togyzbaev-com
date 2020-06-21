@@ -1,3 +1,9 @@
+@import (reference) "../style/adaptive";
+
 .default-layout {
-  padding: 138px 72px;
+  padding: 0 72px;
+
+  @media @xs-max {
+    padding: 40px 15px;
+  }
 }

@@ -14,4 +14,14 @@ const Breadcrumbs = ({links}) => {
     );
 };
 
+Breadcrumbs.INDEX = {
+    to: '/',
+    title: 'Главная'
+};
+
+Breadcrumbs.BLOG = {
+    to: '/blog',
+    title: 'Блог'
+};
+
 export default Breadcrumbs;
