@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import get from 'lodash/get'
-import './blog/index.less';
+import '../components/blog/index.less';
 import PostListItem from "../components/post-list-item";
 import Layout from "../components/layout";
 

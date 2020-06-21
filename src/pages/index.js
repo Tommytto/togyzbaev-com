@@ -1,8 +1,8 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import '../style/index.less';
-import './index/style/style.less';
-import {startAnimation} from "./index/animation";
+import '../components/index/style/style.less';
+import {startAnimation} from "../components/blog/animation";
 import {Helmet} from "react-helmet";
 import Header from "../components/header";
 

@@ -3,31 +3,42 @@ import './post.less'
 import ArticleContent from "../components/article-content";
 import Layout from "../components/layout";
 import {graphql} from "gatsby";
+import Breadcrumbs from "../components/breadcrumbs";
 
 const Post = ({data}) => {
     const post = data.contentfulBlogPost;
     return (
         <Layout>
-        <div className="article-page">
-            <div className="article-page__start">
-                <div className="article-page__title-wrapper">
-                    <h1 className="article-page__title">
-                        {post.title}
-                    </h1>
-                </div>
-                <div className="article-page__hero">
-                    <div className="article-page__hero-inner">
-                        <img src={post.heroImage.fluid.src}
-                         className="article-page__hero-img"
-                         alt="hero"
-                    />
+            <Breadcrumbs links={[
+                {
+                    to: '/',
+                    title: 'Главная'
+                },
+                {
+                    to: '/blog',
+                    title: 'Блог'
+                }
+            ]}/>
+            <div className="article-page">
+                <div className="article-page__start">
+                    <div className="article-page__title-wrapper">
+                        <h1 className="article-page__title">
+                            {post.title}
+                        </h1>
+                    </div>
+                    <div className="article-page__hero">
+                        <div className="article-page__hero-inner">
+                            <img src={post.heroImage.fluid.src}
+                                 className="article-page__hero-img"
+                                 alt="hero"
+                            />
+                        </div>
                     </div>
                 </div>
+                <div className="article-page__body">
+                    <ArticleContent content={post.body.childMarkdownRemark.html}/>
+                </div>
             </div>
-            <div className="article-page__body">
-                <ArticleContent content={post.body.childMarkdownRemark.html} />
-            </div>
-        </div>
         </Layout>
     );
 };
