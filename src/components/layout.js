@@ -2,19 +2,15 @@ import React from 'react'
 import './layout.less'
 import Header from "./header";
 
-class Template extends React.Component {
-  render() {
-    const { children } = this.props
-
+const Layout = () => {
     return (
         <div>
-        <Header />
-        <main className="default-layout">
-          {children}
-        </main>
+            <Header />
+            <main className="default-layout">
+                {children}
+            </main>
         </div>
-    )
-  }
-}
+    );
+};
 
-export default Template
+export default Layout;

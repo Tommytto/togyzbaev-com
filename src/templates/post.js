@@ -6,7 +6,6 @@ import {graphql} from "gatsby";
 
 const Post = ({data}) => {
     const post = data.contentfulBlogPost;
-    console.log(post);
     return (
         <Layout>
         <div className="article-page">
